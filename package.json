@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@bablast/client": "^1.1.0"
+    "@bablast/client": "git+https://github.com/bablast-id/sdk.git"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",

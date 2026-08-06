@@ -1,0 +1,43 @@
+{
+  "name": "@bablast/n8n-nodes-bablast",
+  "version": "1.0.0",
+  "description": "Official n8n community node for Bablast WhatsApp messaging API and WABA automation.",
+  "keywords": [
+    "n8n-community-node-package",
+    "bablast",
+    "whatsapp",
+    "waba",
+    "messaging",
+    "automation"
+  ],
+  "license": "MIT",
+  "homepage": "https://bablast.id",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bablast-id/n8n-nodes-bablast.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').mkdirSync('dist/nodes/Bablast', {recursive: true}); require('fs').copyFileSync('nodes/Bablast/Bablast.svg', 'dist/nodes/Bablast/Bablast.svg')\"",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/BablastApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Bablast/Bablast.node.js",
+      "dist/nodes/Bablast/BablastTrigger.node.js"
+    ]
+  },
+  "dependencies": {
+    "bablastid": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "n8n-workflow": "^1.78.0",
+    "typescript": "^5.8.2"
+  }
+}

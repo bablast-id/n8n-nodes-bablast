@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BablastTrigger = void 0;
-const bablastid_1 = require("bablastid");
+const client_1 = require("@bablast/client");
 class BablastTrigger {
     description = {
         displayName: 'Bablast Trigger',
@@ -70,7 +70,7 @@ class BablastTrigger {
                 const credentials = await this.getCredentials('bablastApi');
                 const senderId = this.getNodeParameter('senderId');
                 const channelType = this.getNodeParameter('channelType', 'blast');
-                const client = new bablastid_1.BablastClient({
+                const client = new client_1.BablastClient({
                     apiKey: credentials.apiKey,
                     baseUrl: credentials.baseUrl,
                 });
@@ -88,7 +88,7 @@ class BablastTrigger {
                 const senderId = this.getNodeParameter('senderId');
                 const channelType = this.getNodeParameter('channelType', 'blast');
                 const events = this.getNodeParameter('events');
-                const client = new bablastid_1.BablastClient({
+                const client = new client_1.BablastClient({
                     apiKey: credentials.apiKey,
                     baseUrl: credentials.baseUrl,
                 });
@@ -103,7 +103,7 @@ class BablastTrigger {
                 const credentials = await this.getCredentials('bablastApi');
                 const senderId = this.getNodeParameter('senderId');
                 const channelType = this.getNodeParameter('channelType', 'blast');
-                const client = new bablastid_1.BablastClient({
+                const client = new client_1.BablastClient({
                     apiKey: credentials.apiKey,
                     baseUrl: credentials.baseUrl,
                 });
@@ -123,7 +123,7 @@ class BablastTrigger {
         const req = this.getRequestObject();
         const body = req.body;
         const credentials = await this.getCredentials('bablastApi');
-        const client = new bablastid_1.BablastClient({
+        const client = new client_1.BablastClient({
             apiKey: credentials.apiKey,
             baseUrl: credentials.baseUrl,
         });

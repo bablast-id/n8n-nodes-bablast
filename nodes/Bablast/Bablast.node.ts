@@ -6,7 +6,7 @@ import {
   INodeTypeDescription,
   NodeOperationError,
 } from 'n8n-workflow';
-import { BablastClient } from 'bablastid';
+import { BablastClient } from '@bablast/client';
 
 export class Bablast implements INodeType {
   description: INodeTypeDescription = {

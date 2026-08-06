@@ -6,7 +6,7 @@ import {
   INodeTypeDescription,
   IWebhookResponseData,
 } from 'n8n-workflow';
-import { BablastClient } from 'bablastid';
+import { BablastClient } from '@bablast/client';
 
 export class BablastTrigger implements INodeType {
   description: INodeTypeDescription = {

@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "bablastid": "^1.1.0"
+    "@bablast/client": "^1.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",

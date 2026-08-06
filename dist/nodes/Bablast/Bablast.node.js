@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Bablast = void 0;
 const n8n_workflow_1 = require("n8n-workflow");
-const bablastid_1 = require("bablastid");
+const client_1 = require("@bablast/client");
 class Bablast {
     description = {
         displayName: 'Bablast',
@@ -281,7 +281,7 @@ class Bablast {
         const items = this.getInputData();
         const returnData = [];
         const credentials = await this.getCredentials('bablastApi');
-        const client = new bablastid_1.BablastClient({
+        const client = new client_1.BablastClient({
             apiKey: credentials.apiKey,
             baseUrl: credentials.baseUrl,
         });
